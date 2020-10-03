@@ -26,17 +26,36 @@
 
 body {
   font-family: 'Proxima Nova Light', sans-serif;
-  color: black;
+  color: white;
+  background-color: black;
 }
 
 .button-o {
-  border: 1px solid #510bba;
+  border: 1px solid #ff0000;
   padding: 17px 22px;
   font-size: 12px;
   text-transform: uppercase;
-  color: #510bba;
-  background-color: white;
+  color: #ff0000;
+  background-color: black;
   font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.button {
+  border: none;
+  text-transform: uppercase;
+  padding: 25px 45px;
+  background-color: #ff0000;
+  color: #ffffff;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #000000;
+  z-index: 99;
 }
 
 .navbar-wrap {
@@ -62,7 +81,7 @@ body {
   font-size: 19px;
   font-family: 'Proxima Nova Semibold', sans-serif;
   text-decoration: none;
-  color: black;
+  color: #ff0000;
 }
 
 .navbar__small-text {
@@ -70,6 +89,44 @@ body {
   font-size: 14px;
   color: grey;
   text-decoration: none;
+}
+
+.menu {
+  position: fixed;
+  z-index: 0;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  padding: 16px 0;
+  background-color: #ff0000;
+  color: #fff;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.menu_active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.menu__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menu__link {
+  text-decoration: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .menu-button {
@@ -88,8 +145,8 @@ body {
           justify-content: center;
   background-color: transparent;
   border: none;
-  border-right: 1px solid rgba(81, 11, 186, 0.1);
-  border-left: 1px solid rgba(81, 11, 186, 0.1);
+  border-right: 1px solid rgba(255, 0, 0, 0.2);
+  border-left: 1px solid rgba(255, 0, 0, 0.2);
   height: 80px;
   width: 70px;
 }
@@ -98,7 +155,7 @@ body {
   display: block;
   width: 20px;
   height: 3px;
-  background-color: #89a9eb;
+  background-color: #ff0000;
   margin: 2px 0;
 }
 
@@ -114,5 +171,24 @@ body {
   display: block;
   font-size: 14px;
   color: grey;
+}
+
+.hero {
+  background: black url("../img/hero/hero-bg.jpg") no-repeat center top 80px;
+  background-size: contain;
+  padding-top: 180px;
+  padding-bottom: 270px;
+}
+
+.hero__title {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.hero__subtitle {
+  display: block;
+  margin-bottom: 67px;
+  font-size: 30px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
